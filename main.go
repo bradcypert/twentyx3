@@ -32,7 +32,7 @@ func main() {
 	runtime.LockOSThread()
 
 	s0 := state{"loaded", 0, "🕶 twentyx3 %02d:%02d", nil}
-	s1 := state{"working", 15, "🟢 Screen Time %02d:%02d", nil}
+	s1 := state{"working", 1200, "🟢 Screen Time %02d:%02d", nil}
 	s2 := state{"break", 20, "🟡 Break Time %02d:%02d", nil}
 
 	s0.next = &s1
