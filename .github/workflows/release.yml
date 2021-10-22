@@ -1,0 +1,25 @@
+name: Release TBB binaries
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  releases-matrix:
+    name: Release Go Binary
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # build and publish in parallel: linux/amd64
+        goos: [linux, darwin, windows]
+        goarch: [amd64]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run: ./build.sh
+      - uses: elgohr/Github-Release-Action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: MyReleaseMessage
