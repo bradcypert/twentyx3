@@ -8,7 +8,7 @@ on:
 jobs:
   releases-matrix:
     name: Release Go Binary
-    runs-on: ubuntu-latest
+    runs-on: macos-11
     strategy:
       matrix:
         goos: [darwin]
