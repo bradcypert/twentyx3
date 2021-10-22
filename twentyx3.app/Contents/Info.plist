@@ -5,7 +5,7 @@
 	<key>CFBundleExecutable</key>
 	<string>twentyx3</string>
 	<key>CFBundleIconFile</key>
-	<string>icon.icns</string>
+	<string>twenty.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.bradcypert.twentyx3</string>
 	<key>NSHighResolutionCapable</key>
